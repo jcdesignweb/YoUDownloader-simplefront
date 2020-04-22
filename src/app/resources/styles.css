@@ -1,0 +1,231 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap');
+
+html {
+    
+    font-family: 'Baloo Paaji 2', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    color: white
+}
+
+body {
+    
+}
+
+
+.modal .modal-footer {
+    padding: 0;
+}
+
+.no-padding { padding: 0; }
+.no-margin { margin: 0; }
+
+#btnDownload {
+    height: 44px;
+    line-height: 44px;
+
+    right: 22px;
+    bottom: 10px;
+}
+
+.preloader-wrapper {
+    position: absolute;
+    right: 20px;
+}
+
+.playlist {
+    position: relative;
+    padding: 30px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.playlist::after {
+    border-radius: 10px;
+    z-index:-1;
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: black;
+    opacity: 0.2;
+    width:100%;
+    height:100%;
+}
+
+.playlist ul li {
+    cursor: pointer;
+    color: black;
+}
+
+.playlist ul li:hover {
+    text-decoration: underline;
+}
+
+.controls button {
+    background: white;
+    border-radius: 21px;
+    padding: 7px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+.controls button:hover {
+    background: gray;
+}
+
+#playing {
+    z-index: 1001;
+    
+    color: white;
+    height: 80px;
+    
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 80px;
+
+
+    background: rgba(18, 20, 24, 0.8);
+    
+    backdrop-filter: blur(20px);
+    
+}
+
+#playing .row {
+    position: relative;
+    z-index: 1002;
+
+}
+
+#playing #timing {
+    line-height: 30px;
+}
+
+#playing #details {
+    min-height: 95px;
+}
+
+#playing #details img {
+    width: 70px;
+    height: 70px;
+}
+
+#playing #details img[src="/"] {
+    display: none;
+}
+
+
+.range-field {
+    margin: 10px 0 0 0;
+}
+
+.range-field .thumb {
+    z-index: 900;
+}
+
+.range-field input[type=range] {
+    border: none;
+}
+
+
+#playing #slider input[type=range] {
+    background: linear-gradient(to right, #606268 0%, #606268 0%, #606268 0%, #606268 100%);
+    border: solid 1px #606268;
+    border-radius: 8px;
+    height: 4px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+#playing #slider .thumb {
+    
+    display: none;
+}
+
+#playing #slider input[type=range]::-webkit-slider-thumb {
+    background-color: grey;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 12px;
+    margin: -2px 0 0 0;
+    transform-origin: 50% 50%;
+    transition: box-shadow .3s;
+    -webkit-appearance: none;
+    width: 12px;
+}
+
+#content {
+    background: #070b11;
+}
+
+.sidenav {
+
+    width: 200px;
+    
+    background: rgba(17,30,34,1);
+    background: -moz-linear-gradient(-45deg, rgba(17,30,34,1) 0%, rgba(24,27,36,1) 88%, rgba(26,31,40,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(17,30,34,1)), color-stop(88%, rgba(24,27,36,1)), color-stop(100%, rgba(26,31,40,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(17,30,34,1) 0%, rgba(24,27,36,1) 88%, rgba(26,31,40,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(17,30,34,1) 0%, rgba(24,27,36,1) 88%, rgba(26,31,40,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(17,30,34,1) 0%, rgba(24,27,36,1) 88%, rgba(26,31,40,1) 100%);
+    background: linear-gradient(135deg, rgba(17,30,34,1) 0%, rgba(24,27,36,1) 88%, rgba(26,31,40,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111e22', endColorstr='#1a1f28', GradientType=1 );
+}
+
+.sidenav li > a {
+    color: #626262;
+    font-weight: bold;
+    line-height: 50px;
+    height: 40px;
+    padding: 0 12px;
+}
+
+.sidenav li > a:hover {
+    color: #26a69a;
+}
+
+.sidenav li a:hover i {
+    color: #26a69a !important;
+}
+
+.sidenav li > a > i, .sidenav li > a > [class^=mdi-], 
+.sidenav li > a li > a > [class*=mdi-], 
+.sidenav li > a > i.material-icons {
+    margin-right: 20px;
+}
+
+.sidenav li a i {
+    color: #626262 !important;
+    font-size: 24px;
+}
+
+.sidenav .space-middle {
+    height: 30px;
+}
+
+.sidenav li {
+    line-height: 30px;
+    padding: 5px 0;
+}
+
+.sidenav .title {
+    padding: 0 0 0 15px;
+    font-size: 14px;
+}
+
+.sidenav .first i, .sidenav .first a {
+    height: 20px !important;
+    line-height: 20px !important;
+
+}
+
+
+.sidenav li ul li a {
+
+}
+  

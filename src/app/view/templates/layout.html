@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Youtube Music downloader">
+    <meta name="author" content="Juan Andres Carmena">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/040fcb157b.js" crossorigin="anonymous"></script>
+
+    <title>
+        {% if title %} {{ title }} | YouMusic!
+        {% else %} YouMusic!
+        {% endif %}
+    </title>
+
+</head>
+
+    <body>
+        <div class="col l3" id="menu">
+
+            {% include "templates/partials/nav.njk" %}
+    
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me s!</a>
+    
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#modal1" class="modal-trigger">Download</a></li>
+                <li><a href="#!">Playlist</a></li>
+                <li><a href="#!">Contact me 222</a></li>
+            </ul>
+    
+        </div>
+
+        <!-- Page Content -->
+        <div class="row">
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+
+        {% include "templates/player.njk" %}
+
+        {% include "templates/modals/download.modal.njk" %}
+        
+    </body>
+</html>
